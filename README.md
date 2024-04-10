@@ -1,17 +1,41 @@
 # obs_status
 
 A new Flutter project.
+A simple application to overview various status of obs via websocket
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Getting started
 
-A few resources to get you started if this is your first Flutter project:
+```sh
+# Clean & Install dependencies
+make clean
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Run the app
+make run (dev-mode)
+make run-prod (prod-mode)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# obs_status
+# In der Entwicklung Dart files generieren
+make build-runner-watch
+```
+
+## Commit
+
+Check your code:
+
+```sh
+make format
+make lint
+make test
+```
+
+## Build and Release
+
+```sh
+# Clean build
+make clean
+make build-runner
+
+
+# Build .apk
+make build-apk # Google Testing
+```

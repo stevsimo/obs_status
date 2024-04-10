@@ -29,3 +29,11 @@ build-runner-watch:
 
 appicon:
 	dart run flutter_launcher_icons -f flutter_launcher_icons.yaml
+
+# ANDROID BUILD
+build-apk:
+	@echo "Building Android .apk ..."
+	make clean
+	flutter build apk --target-platform=android-arm,android-arm64 --obfuscate --split-debug-info=./dist/debug/
+	cp build/app/outputs/bundle/release/app-release.apk dist/
+	mv dist/app-release.apk dist/zaunteam.apk
